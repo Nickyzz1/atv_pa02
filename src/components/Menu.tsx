@@ -13,8 +13,8 @@ export const Menu = ({op1, op2, op3} :
 ) =>{
     const style = 
     {
-    p:"text-white bg-cyan-700 p-2 rounded hover:bg-cyan-600 min-w-auto w-30 text-center",
-    nav:"flex flex-wrap text-white bg-cyan-800 gap-3 p-3 text-large flex-row justify-center align-center font-comic"
+    p:"text-white bg-violet-800 p-2 rounded hover:bg-violet-700 min-w-auto w-30 text-center",
+    nav:"flex flex-wrap text-white  bg-violet-800 gap-3 p-3 text-large flex-row justify-center align-center font-comic"
     }
 
     return(

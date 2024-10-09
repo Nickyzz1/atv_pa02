@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import React, { Suspense } from "react"
 
 interface IData {
     name: string;
@@ -40,8 +41,8 @@ const FetchPage = () => {
     return (
         <div className="min-h-screen overflow-y-auto  bg-gradient-to-r from-violet-950 to-indigo-950">
             <h1 className="text-center text-white m-4 text-medium ">Personagens</h1>
+    <Suspense fallback = { <div> Loading..</div>}>
         <div className={style.container}>
-     
             {character.map((item: IData, index) => (
                 <div className={style.box} key={index}>
                     <h2>{item.name}</h2>
@@ -57,6 +58,7 @@ const FetchPage = () => {
                 </div>
             ))}
         </div>
+    </Suspense>
         </div>
     );
 };
