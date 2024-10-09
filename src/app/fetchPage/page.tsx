@@ -14,8 +14,8 @@ const FetchPage = () => {
 
     const style =
     {
-        container: "flex flex-row flex-wrap gap-6 m-4 justify-center",
-        box: "flex flex-col items-center justify-center w-80 p-6 bg-purple-800 shadow-[0_10px_33px_1px_rgba(0,0,0,0.4)] rounded-xl text-white"
+        container: "flex flex-row flex-wrap gap-6 m-4 justify-center m-4",
+        box: "flex flex-col items-center justify-center w-80 p-6 bg-purple-800 shadow-[0_10px_33px_1px_rgba(0,0,0,0.4)] rounded-xl text-white hover:scale-[1.05] ease-linear shadow-[0_10px_33px_1px_rgba(255,255,255,0.4)"
     }
 
     useEffect(() => {
@@ -41,24 +41,23 @@ const FetchPage = () => {
     return (
         <div className="min-h-screen overflow-y-auto  bg-gradient-to-r from-violet-950 to-indigo-950">
             <h1 className="text-center text-white m-4 text-medium ">Personagens</h1>
-    <Suspense fallback = { <div> Loading..</div>}>
         <div className={style.container}>
+    <Suspense fallback = { <div> Loading..</div>}>
             {character.map((item: IData, index) => (
                 <div className={style.box} key={index}>
                     <h2>{item.name}</h2>
-                    <p>{item.ki}</p>
+                    <p>Ki: {item.ki}</p>
                     <Image
                         className="h-60 w-auto object-cover rounded-lg"
                         src={item.image}
                         alt={item.name} 
                         width={200}
                         height={400}
-                        
                     />
                 </div>
             ))}
-        </div>
     </Suspense>
+        </div>
         </div>
     );
 };
