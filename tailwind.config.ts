@@ -11,7 +11,17 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        white : "var(--white)",
       },
+      fontSize: {
+        large:"26px",
+        medium: "24px",
+        small: "16px"
+      },
+      fontFamily: 
+      {
+        comic : "var(--comic)" 
+      }
     },
   },
   plugins: [],
